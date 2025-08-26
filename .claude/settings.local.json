@@ -4,7 +4,14 @@
       "Bash(npm test:*)",
       "Bash(grep:*)",
       "Bash(npm install:*)",
-      "Bash(npm run lint)"
+      "Bash(npm run lint)",
+      "Bash(claude doctor)",
+      "mcp__playwright",
+      "Bash(npm run dev:*)",
+      "mcp__playwright__browser_wait_for",
+      "mcp__playwright__browser_snapshot",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ],
     "deny": [],
     "ask": []
