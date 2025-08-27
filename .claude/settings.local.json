@@ -11,7 +11,8 @@
       "mcp__playwright__browser_wait_for",
       "mcp__playwright__browser_snapshot",
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(git log:*)"
     ],
     "deny": [],
     "ask": []
