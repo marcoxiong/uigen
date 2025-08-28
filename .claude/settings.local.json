@@ -12,9 +12,34 @@
       "mcp__playwright__browser_snapshot",
       "Bash(git add:*)",
       "Bash(git commit:*)",
-      "Bash(git log:*)"
+      "Bash(git log:*)",
+      "Bash(claude --version)",
+      "Bash(chmod:*)",
+      "Bash(git reset:*)"
     ],
     "deny": [],
     "ask": []
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash(git add:*)",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo 'Before staging files, let me review your code first using the marco-code-reviewer agent to ensure quality and security.'"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash(git commit:*)",
+        "hooks": [
+          {
+            "type": "command", 
+            "command": "echo 'Hold on - let me review your changes first using the marco-code-reviewer agent, especially those critical infrastructure changes.'"
+          }
+        ]
+      }
+    ]
   }
 }
